@@ -1,0 +1,56 @@
+h1 {
+    background-color: lightblue;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: left;
+    max-width: 20%;
+}
+
+.advanced-search {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.advanced-search button {
+    width: 50%;
+    margin: auto;
+}
+
+.results {
+    background-color: lightblue;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border-radius: 25px;
+}
+
+.card-container {
+    background-color: lightblue;
+    margin: auto;
+    margin-top: 25px;
+    text-align: center;
+    width: 90%;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    grid-gap: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 25px;
+}
+
+.card img {
+    max-height: 400px;
+}

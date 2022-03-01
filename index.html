@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/mtg.css">
+    
+    <title>MTG Database Search</title>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>
+                Magic: The Gathering Database Search
+            </h1>
+        </div>
+        <nav>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="buttons">
+            <div class="random-cards">
+                <h3>
+                    Get Random Cards
+                </h3>
+                <input type="number" id="num" name="quantity" min="1" max="50" placeholder="#">
+                <button onclick="requestRandomCard()">Random Card</button>
+            </div>
+            <div class="card-by-name">
+                <h3>
+                    Search Card Name
+                </h3>
+                <input type="text" id="card-name" name="card-name" placeholder="Card name">
+                <button onclick="requestCardByName()">Search by Name</button>
+            </div>
+            <div class="advanced-search">
+                <h3>
+                    Advanced Search
+                </h3>
+                <input list="rarity" placeholder="Rarity">
+                    <datalist id="rarity">
+                        <option value="common"></option>   
+                        <option value="uncommon"></option>
+                        <option value="rare"></option>
+                        <option value="mythic"></option>    
+                    </datalist>
+                <div class="colors">
+                    <input type="checkbox" id="color" name="red" value="r">
+                    <label for="red">Red</label>
+                    <input type="checkbox" id="color" name="green" value="g">
+                    <label for="green">Green</label>
+                    <input type="checkbox" id="color" name="blue" value="u">
+                    <label for="blue">Blue</label>
+                    <input type="checkbox" id="color" name="black" value="b">
+                    <label for="black">Black</label>
+                    <input type="checkbox" id="color" name="white" value="w">
+                    <label for="white">White</label>
+                </div>
+                <input type="text" id="card-type" name="card-type" placeholder="Card type (i.e. 'creature')">
+                <input type="text" id="oracle-text" name="oracle-text" placeholder="Card rules text">
+                <input type="number" id="cmc" name="cmc" placeholder="Converted mana cost">
+                <input type="number" id="power" name="power" placeholder="Power">
+                <input type="number" id="toughness" name="toughness" placeholder="Toughness">
+                <button onclick="advancedSearch()">Search</button>
+            </div>
+        </div>
+        <div class="results">
+
+        </div>
+        <div class="card-container">
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/mtg.js"></script>
+</body>
+
+</html>
